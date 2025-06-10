@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --black-color: #000;
+  --white-color: #fff;
+  --text-color: #333;
+  --openSans: "Open Sans", sans-serif;
+  --Edusahand: "Edu SA Hand", cursive;
+  --transition-regular: .3s;
+  --transition-slow: .6s;
+}
+
+body{
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.head-title h1{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--Edusahand);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.wrapper-box{
+  width: 700px;
+}
+
+.border-light{
+  border: 1px solid #333 !important;
+}
+
+.border-light-end{
+  border: 1px solid #333 !important;
+}
+
+.trans-card-wrap{
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.trans-card-wrap::-webkit-scrollbar{
+  width: 2px;
+  background-color: transparent;
+}
+
+.trans-card-wrap::-webkit-scrollbar-thumb{
+  background-color: rgb(196, 186, 186) !important;
+  border-radius: 10px !important;
+}
+
+.trans-card{
+  cursor: pointer;
+}
+
+.trans-card:hover .delete-card{
+  opacity: 1;
+  z-index: 1;
+}
+
+.delete-card{
+  right: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition-regular);
+}
+
+.input-box input{
+  background-color: transparent !important;
+  color: var(--white-color) !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &::placeholder{
+    color: var(--white-color) !important;
+  }
+}
+
+.input-box input:active, .input-box input:focus{
+  border-color: #48ff0060;
+}
+
+@media (max-width: 575px){
+  .wrapper-box{
+    width: 100%;
+  }
+}

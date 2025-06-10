@@ -31,7 +31,7 @@ const Index = () => {
         <div className="wrapper-box">
           <div className="border-light px-5 py-4 rounded">
             <div className="mb-4">
-              <small className="text-uppercase fw-bold">YOUR BALANCE</small>
+              <small className="text-uppercase fw-bold">Saldo</small>
               <h2>{balance.toFixed(2)}€</h2>
             </div>
 
